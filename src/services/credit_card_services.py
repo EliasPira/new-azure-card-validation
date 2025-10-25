@@ -1,7 +1,7 @@
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.documentintelligence import DocumentIntelligenceClient
 from azure.ai.documentintelligence.models import AnalyzeDocumentRequest 
-from ultils._config import Config
+from utils._config import Config
 
 def analyze_credit_card(card_url):
         
