@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 from azure.storage.blob import BlobServiceClient
-from ultils.Config import Config
+from ultils._config import Config
 
 def upload_blob (file, file_name):
     try:

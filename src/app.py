@@ -24,11 +24,12 @@ def configure_interface():
 def show_image_and_validation(blob_url, credit_card_info):
     st.image(blob_url, caption="Arquivo enviado",width="stretch")
     st.write("Resultado da validaçao:")
-    if credit_card_info and credit_card_info ["card_name"]:
+    if credit_card_info and credit_card_info ["card_name"] and credit_card_info ["card_number"] and credit_card_info ["expiry_date"]:
         st.markdown(f"<h1 style='color: green;'>Válido</h1>", unsafe_allow_html=True) 
         st.write(f"Nome do Titular: {credit_card_info['card_name']}")
         st.write(f"Banco Emissor: {credit_card_info['bank_name']}")
-        st.write(f"Data de Validade: {credit_card_info['expiry_date']}")   
+        st.write(f"Data de Validade: {credit_card_info['expiry_date']}")
+        st.write(f"Número do Cartão: {credit_card_info['card_number']}")   
     else:
         st.markdown(f"<h1 style='color: red;'>Cartão Inválido</h1>", unsafe_allow_html=True)
         st.write("Este não é um cartão de crédito válido.")
